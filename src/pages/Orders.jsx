@@ -1,5 +1,5 @@
 import React from 'react';
-import { OrderItem } from '../components/OrderItem';
+import { OrderItem } from '@components/OrderItem';
 
 function Orders() {
 	return (

@@ -1,11 +1,13 @@
 import React from 'react';
-import '../styles/SendEmail.scss';
+import '@styles/SendEmail.scss';
+import yardSalelogo from '@images/logo_yard_sale.svg';
+import iconEmail from '@icons/email.svg';
 function SendEmail() {
 	return (
 		<main className='email-sent'>
 			<div className='email-sent__container'>
 				<img
-					src='../img/logo_yard_sale.svg'
+					src={yardSalelogo}
 					alt='logo yard sale'
 					className='email-sent__logo'
 				/>
@@ -16,7 +18,7 @@ function SendEmail() {
 				<div className='email-sent__content'>
 					<div className='email-sent__logo-env-container'>
 						<img
-							src='../icons/email.svg'
+							src={iconEmail}
 							alt='logo envelope'
 							className='email-sent__logo--envelope'
 						/>

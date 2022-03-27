@@ -1,5 +1,6 @@
 import React from 'react';
-import '../styles/ProductItem.scss';
+import '@styles/ProductItem.scss';
+import iconAddToCart from '@icons/bt_add_to_cart.svg';
 function ProductItem() {
 	return (
 		<div className='product-item'>
@@ -14,7 +15,7 @@ function ProductItem() {
 					<p>Laptop</p>
 				</div>
 				<figure>
-					<img src='../icons/bt_add_to_cart.svg' alt='shopping car' />
+					<img src={iconAddToCart} alt='shopping car' />
 				</figure>
 			</div>
 		</div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import '../styles/OrderItem.scss';
+import '@styles/OrderItem.scss';
+import littleArrow from '@icons/flechita.svg';
 function OrderItem() {
 	return (
 		<section class='order-item'>
@@ -8,7 +9,7 @@ function OrderItem() {
 				<span>6 articles</span>
 			</p>
 			<p>$560.00</p>
-			<img src='../icons/flechita.svg' alt='arrow' />
+			<img src={littleArrow} alt='arrow' />
 		</section>
 	);
 }
