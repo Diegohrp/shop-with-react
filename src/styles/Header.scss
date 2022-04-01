@@ -55,18 +55,23 @@ header {
 	font-size: var(--sm);
 	align-items: center;
 	position: relative;
-	margin-right: 20px;
+	margin-right: 40px;
 }
 .navbar__shopping li:first-child {
 	cursor: pointer;
 	margin-right: 10px;
 }
-.navbar__shopping li:last-child {
+.navbar__shopping li.navbar__num-products {
 	position: absolute;
-	right: 3px;
-	top: -2px;
+	right: -5px;
+	top: -5px;
 	font-size: 1rem;
 	font-weight: bold;
+	width: 13px;
+	height: 13px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: var(--primary-color);
 }
 
 @media (max-width: 700px) {

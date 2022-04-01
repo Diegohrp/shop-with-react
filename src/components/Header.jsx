@@ -3,9 +3,12 @@ import { Menu } from './Menu';
 import '@styles/Header.scss';
 import menuIcon from '@icons/icon_menu.svg';
 import logoYardSale from '@images/logo_yard_sale.svg/';
-import iconShoppingCart from '@icons/icon_shopping_cart_notification.svg';
+import iconShoppingCart from '../assets/icons/icon_shopping_cart.svg';
+import { AppContext } from '../context/AppContext';
+
 function Header() {
 	const [toggleMenu, setToggleMenu] = React.useState(false);
+	const { state } = React.useContext(AppContext);
 
 	const handleToggle = () => {
 		setToggleMenu(!toggleMenu);
@@ -48,7 +51,9 @@ function Header() {
 						<li>
 							<img src={iconShoppingCart} alt='shopping cart' />
 						</li>
-						<li>2</li>
+						{!!state.cart.length && (
+							<li className='navbar__num-products'>{state.cart.length}</li>
+						)}
 					</div>
 				</ul>
 				{!!toggleMenu && <Menu />}
