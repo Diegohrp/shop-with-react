@@ -20,7 +20,7 @@ header {
 }
 
 .navbar__logo img {
-	margin: 0 30px;
+	margin: 0 20px;
 	width: 125px;
 }
 
@@ -55,9 +55,12 @@ header {
 	font-size: var(--sm);
 	align-items: center;
 	position: relative;
-	margin-right: 30px;
+	margin-right: 20px;
 }
-
+.navbar__shopping li:first-child {
+	cursor: pointer;
+	margin-right: 10px;
+}
 .navbar__shopping li:last-child {
 	position: absolute;
 	right: 3px;
@@ -66,7 +69,7 @@ header {
 	font-weight: bold;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 	.navbar__menu {
 		display: block;
 		margin-left: 15px;

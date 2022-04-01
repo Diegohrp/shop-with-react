@@ -2,10 +2,22 @@ import React from 'react';
 import '@styles/login.scss';
 import logoYardSale from '@images/logo_yard_sale.svg';
 function Login() {
+	const form = React.useRef(null);
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const formData = new FormData(form.current);
+		const data = {
+			username: formData.get('email'),
+			password: formData.get('password'),
+		};
+		console.log(data);
+	};
+
 	return (
 		<main className='login-container'>
 			<img src={logoYardSale} alt='yard sale logo' className='login__logo' />
-			<form action='' className='login__form'>
+			<form action='' className='login__form' ref={form}>
 				<label htmlFor='email' className='login__label'>
 					Email address
 				</label>
@@ -13,7 +25,7 @@ function Login() {
 					type='email'
 					className='login__input'
 					placeholder='user@email.example'
-					id='email'
+					name='email'
 				/>
 				<label htmlFor='password' className='login__label'>
 					Password
@@ -22,9 +34,14 @@ function Login() {
 					type='password'
 					className='login__input'
 					placeholder='*********'
-					id='password'
+					name='password'
 				/>
-				<input type='submit' value='Login' className='login__button' />
+				<input
+					type='submit'
+					value='Login'
+					className='login__button'
+					onClick={handleSubmit}
+				/>
 				<a href='#' className='login__text'>
 					Forgot my password
 				</a>
