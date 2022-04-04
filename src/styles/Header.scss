@@ -1,5 +1,8 @@
 header {
 	width: 100vw;
+	position: sticky;
+	top: 0;
+	background-color: white;
 }
 
 .navbar__items-container {
@@ -72,6 +75,10 @@ header {
 	text-align: center;
 	border-radius: 50%;
 	background-color: var(--primary-color);
+}
+
+.navbar__shopping li.navbar__shopping-cart {
+	cursor: pointer;
 }
 
 @media (max-width: 700px) {

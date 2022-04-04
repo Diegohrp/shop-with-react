@@ -1,16 +1,21 @@
 import React from 'react';
 import '@styles/OrderItem.scss';
-import littleArrow from '@icons/flechita.svg';
-function OrderItem() {
+import closeIcon from '@icons/icon_close.png';
+import { AppContext } from '../context/AppContext';
+
+function OrderItem({ product, index }) {
+	const { removeToCart } = React.useContext(AppContext);
 	return (
-		<section class='order-item'>
-			<p>
-				<span>04.25.2021</span>
-				<span>6 articles</span>
-			</p>
-			<p>$560.00</p>
-			<img src={littleArrow} alt='arrow' />
-		</section>
+		<div className='shopping-cart'>
+			<img
+				className='shopping-cart__img'
+				src={product.images[0] || product.category.image}
+				alt='item'
+			/>
+			<p className='shopping-cart__title'>{product.title}</p>
+			<p className='shopping-cart__price'>{`$ ${product.price}`}</p>
+			<img src={closeIcon} alt='delete' onClick={() => removeToCart(index)} />
+		</div>
 	);
 }
 
