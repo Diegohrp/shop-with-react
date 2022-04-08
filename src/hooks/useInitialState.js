@@ -3,6 +3,7 @@ import React from 'react';
 const initialState = {
 	//Se puede tener distintos tipos de info.
 	cart: [],
+	toggleOrder: false,
 };
 //Se crea el estado general de la Aplicación
 function useInitialState() {
@@ -22,11 +23,18 @@ function useInitialState() {
 		});
 	};
 
+	const handleToggleOrder = () => {
+		if (state.cart.length) {
+			setState({ ...state, toggleOrder: !state.toggleOrder });
+		}
+	};
+
 	//Se retorna el estado y la función addToCart que modifica la info de cart[]
 	return {
 		state,
 		addToCart,
 		removeToCart,
+		handleToggleOrder,
 	};
 }
 

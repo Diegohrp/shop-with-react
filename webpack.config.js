@@ -7,7 +7,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'build'),
 		filename: 'bundle.js',
-		publicPath: './',
+		publicPath: '/',
 	},
 	mode: 'development',
 
@@ -47,7 +47,7 @@ module.exports = {
 				test: /\.(png|svg|jpg|gif)$/,
 				type: 'asset',
 				generator: {
-					filename: 'public/[hash][ext]',
+					filename: '[hash][ext]',
 				},
 			},
 		],

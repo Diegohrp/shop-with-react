@@ -9,18 +9,10 @@ import { AppContext } from '../context/AppContext';
 
 function Header() {
 	const [toggleMenu, setToggleMenu] = React.useState(false);
-	const [toggleOrder, setToggleOrder] = React.useState(false);
-
-	const { state } = React.useContext(AppContext);
+	const { state, handleToggleOrder } = React.useContext(AppContext);
 
 	const handleToggle = () => {
 		setToggleMenu(!toggleMenu);
-	};
-
-	const handleToggleOrder = () => {
-		if (state.cart.length) {
-			setToggleOrder(!toggleOrder);
-		}
 	};
 
 	return (
@@ -66,7 +58,7 @@ function Header() {
 					</div>
 				</ul>
 				{!!toggleMenu && <Menu />}
-				{!!toggleOrder && !!state.cart.length && <MyOrder />}
+				{!!state.toggleOrder && !!state.cart.length && <MyOrder />}
 			</nav>
 		</header>
 	);

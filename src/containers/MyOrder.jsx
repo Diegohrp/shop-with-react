@@ -5,7 +5,7 @@ import '@styles/MyOrder.scss';
 import littleArrowIcon from '@icons/flechita.svg';
 
 function MyOrder() {
-	const { state } = React.useContext(AppContext);
+	const { state, handleToggleOrder } = React.useContext(AppContext);
 
 	const sumTotal = () => {
 		const reducer = (accumutator, currentValue) =>
@@ -18,7 +18,7 @@ function MyOrder() {
 		<aside className='main-carts-container'>
 			<div className='carts-container'>
 				<div className='back-button-carts'>
-					<img src={littleArrowIcon} alt='' />
+					<img src={littleArrowIcon} alt='' onClick={handleToggleOrder} />
 					<p>Shopping cart</p>
 				</div>
 				{state.cart.map((product, index) => (
