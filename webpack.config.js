@@ -7,7 +7,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'build'),
 		filename: 'shop-with-react/bundle.js',
-		publicPath: '/shop-with-react',
+		publicPath: '/shop-with-react/',
 	},
 	mode: 'development',
 
