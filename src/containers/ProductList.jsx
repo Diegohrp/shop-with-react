@@ -9,8 +9,8 @@ function ProductList() {
 	return (
 		<main className='main-container'>
 			<section className='product-list'>
-				{products.map((product) => (
-					<ProductItem item={product} key={product.id} />
+				{products.map((product, index) => (
+					<ProductItem item={product} key={product.id} index={index} />
 				))}
 			</section>
 		</main>

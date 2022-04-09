@@ -16,10 +16,10 @@ function useInitialState() {
 	};
 
 	//Eliminar producto del carrito, utilizamos el index por si se repite un mismo producto
-	const removeToCart = (payload) => {
+	const removeFromCart = (payload) => {
 		setState({
 			...state,
-			cart: state.cart.filter((item, index) => index !== payload),
+			cart: state.cart.filter((item) => item.id !== payload.id),
 		});
 	};
 
@@ -33,7 +33,7 @@ function useInitialState() {
 	return {
 		state,
 		addToCart,
-		removeToCart,
+		removeFromCart,
 		handleToggleOrder,
 	};
 }

@@ -25,7 +25,6 @@ function MyOrder() {
 					<OrderItem
 						product={product}
 						key={`orderItem-${product.id}${index}`}
-						index={index}
 					/>
 				))}
 				<div className='shopping-total'>
