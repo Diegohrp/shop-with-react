@@ -66,6 +66,6 @@ module.exports = {
 		compress: true,
 		//Historia de lo que sucede en el navegador
 		historyApiFallback: true,
-		port: 3006,
+		port: 3000,
 	},
 };
