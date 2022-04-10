@@ -5,6 +5,8 @@ import iconAddedToCart from '@icons/bt_added_to_cart.svg';
 import { useCart } from '../hooks/useCart';
 
 function ProductItem({ item }) {
+	//custom hook useCart para poder cambiar el estado del ícono add
+	//Para que cuando se elimine el producto desde el chekout, cambie el ícono igual
 	const { added, handleCart } = useCart(item);
 	return (
 		<div className='product-item'>

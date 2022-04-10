@@ -13,6 +13,8 @@
 	position: absolute;
 	top: 52px;
 	left: calc(100% - 225px);
+	background-color: var(--light-color);
+	z-index: 1;
 }
 .menu-desktop li {
 	list-style: none;
